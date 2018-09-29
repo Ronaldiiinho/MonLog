@@ -1,0 +1,13 @@
+{
+    
+    "Corpus" : {
+        "host" : "http://corpus.inlog.com.br:8090/dashboard/rest/exportarrelatorio",
+        "chave" : "15411a6ea99ef4abc9bb38edd7d0a64c",
+        "nome_banco" : "dashboard_inlog"
+    },
+    "Marechal" : {
+        "host" : "http://marechal.inlog.com.br:8090/dashboard/rest/exportarrelatorio",
+        "chave" : "8cb43d742abe4e54df4868b47c1585a2",
+        "nome_banco" : "dashboard_inlog"
+    }
+}
