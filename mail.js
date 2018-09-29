@@ -63,6 +63,7 @@ function EquipStatToHTML(sprintf,stat) {
     }
     html += '</td></tr>';
     html += '</table>';
+    html += '<tr><th colspan=2>Gerado em:' + Date.now() + '</th></tr>';
     return html;
   }
   

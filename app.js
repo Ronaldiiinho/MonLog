@@ -6,7 +6,7 @@ var request = require("request");
 var equipfunc = require('./equipamento.js');
 var alarmefunc = require('./alarmes.js');
 
-
+require('datejs');
 
 var fs = require('fs');
 var bases = JSON.parse(fs.readFileSync('bases.json', 'utf8'));

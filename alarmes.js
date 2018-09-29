@@ -94,7 +94,6 @@ function Req(request, dbBase, base){
                 for(var registro in body.Dados){
                     var dbRegistro = body.Dados[registro];
                     statistic.alarmes++;
-                    
                     if(Date(dbRegistro[5]) > Date(statistic.max_data)){
                         statistic.max_data = dbRegistro[5];
                     }
