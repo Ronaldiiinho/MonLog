@@ -55,10 +55,12 @@ function Req(request, dbBase, base){
             can_off : 0
         };
         
-        if(body.erro){
+        if(error){
+            console.log(this.base + ': ERRO!');
+            statistic.erro = error.message;
+        } else if(body.erro){
             console.log(this.base + ': ERRO!');
             statistic.erro = body.erro;
-            return statistic;
         }else{
             if(body.Dados){
                 for(var registro in body.Dados){

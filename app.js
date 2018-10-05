@@ -21,14 +21,12 @@ var RelAtivos = {
 // Varre as bases de Dashboard cadastradas
 for(var base in bases){
     var dbBase = bases[base];
-
-    if(RelAtivos.EquipamentosConectados){
-        equipfunc.Req(request,dbBase,base);
+    if(base != "Inativas"){
+        if(RelAtivos.EquipamentosConectados){
+            equipfunc.Req(request,dbBase,base);
+        }
+        if(RelAtivos.AlarmesTotalDia){
+            alarmefunc.Req(request,dbBase,base);
+        }
     }
-    if(RelAtivos.AlarmesTotalDia){
-        alarmefunc.Req(request,dbBase,base);
-    }
-
-
-
 }

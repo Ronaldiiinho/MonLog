@@ -7,15 +7,6 @@ var mailfunc = require('./mail.js');
 var sprintf = require("sprintf-js").sprintf;
 
 
-
-var transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'ronaldo.sella@gmail.com',
-      pass: 'Senha1243'
-    }
-  });
-
 function IncTipoAlarme (stat, veiculo, tipo,status){
     var resumo;
     if(veiculo == "Veiculo"){
@@ -79,26 +70,28 @@ function Req(request, dbBase, base){
             alarmes : 0,
             alarmes_veiculo : 0,
             alarmes_operacional : 0,
-            max_data : '01/01/2010',
-            min_data : '01/01/2120',
+            max_data : '2010-01-01',
+            min_data : '2100-01-01',
             desc_alarmes_veiculo : [],
             desc_alarmes_operacao : []
         };
-        
-        if(body.erro){
+
+        if(error){
+            console.log(this.base + ': ERRO!');
+            statistic.erro = error.message;
+        } else if(body.erro){
             console.log(this.base + ': ERRO!');
             statistic.erro = body.erro;
-            return statistic;
         }else{
             if(body.Dados){
                 for(var registro in body.Dados){
                     var dbRegistro = body.Dados[registro];
                     statistic.alarmes++;
-                    if(Date(dbRegistro[5]) > Date(statistic.max_data)){
-                        statistic.max_data = dbRegistro[5];
+                    if(Date.compare(Date.parse(dbRegistro[4]),Date.parse(statistic.max_data)) > 0){
+                        statistic.max_data = dbRegistro[4];
                     }
-                    if(Date(dbRegistro[5]) < Date(statistic.min_data)){
-                        statistic.min_data = dbRegistro[5];
+                    if(Date.compare(Date.parse(dbRegistro[4]),Date.parse(statistic.min_data)) < 0){
+                        statistic.min_data = dbRegistro[4];
                     }
                     IncTipoAlarme(statistic,dbRegistro[2],dbRegistro[0],dbRegistro[3]);
                 }
