@@ -13,7 +13,7 @@ var bases = JSON.parse(fs.readFileSync('bases.json', 'utf8'));
 
 
 var RelAtivos = {
-    EquipamentosConectados : false,
+    EquipamentosConectados : true,
     AlarmesTotalDia : true
 };
 
