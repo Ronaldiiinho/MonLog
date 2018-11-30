@@ -13,8 +13,9 @@ var bases = JSON.parse(fs.readFileSync('bases.json', 'utf8'));
 
 
 var RelAtivos = {
-    EquipamentosConectados : true,
-    AlarmesTotalDia : true
+    EquipamentosConectados : false,
+    AlarmesTotalDia : true,
+    Email : false
 };
 
 
@@ -26,6 +27,7 @@ for(var base in bases){
             equipfunc.Req(request,dbBase,base);
         }
         if(RelAtivos.AlarmesTotalDia){
+            console.log(base + " REQ Iniciada");
             alarmefunc.Req(request,dbBase,base);
         }
     }

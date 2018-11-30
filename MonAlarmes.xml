@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+    <data>
+        <nome>MonAlarmes</nome>
+        <descricao></descricao>
+        <tabela>1,alarmesoperacao</tabela>
+        <banco>0</banco>
+        <conexao>0</conexao>
+        <tipo>T</tipo>
+        <orientacao></orientacao>
+        <grupo>Relatórios Suporte Produto</grupo>
+        <refresh>0</refresh>
+        <pai></pai>
+        <campos></campos>
+        <visivel>1</visivel>
+        <borda>N</borda>
+        <subrelatorio>N</subrelatorio>
+        <prefiltro>S</prefiltro>
+        <sistema>N</sistema>
+        <urlview></urlview>
+        <urldashboard></urldashboard>
+        <vinculo>0</vinculo>
+        <url></url>
+        <tipovinculo>N</tipovinculo>
+        <mnemonico></mnemonico>
+        <donut>0</donut>
+        <grafico3d>F</grafico3d>
+        <formatar></formatar>
+        <stringordem></stringordem>
+        <campoordem>1</campoordem>
+        <ordem>asc</ordem>
+        <mostrartotal></mostrartotal>
+        <mostrarporcentagem></mostrarporcentagem>
+    </data>
+    <tables>
+        <table id="0">
+            <tabelaid>2000</tabelaid>
+            <tabela>alarmes_justificativas</tabela>
+        </table>
+        <table id="1">
+            <tabelaid>2001</tabelaid>
+            <tabela>descricaoalarmesoperacao</tabela>
+        </table>
+        <table id="2">
+            <tabelaid>2008</tabelaid>
+            <tabela>statusalarmeoperacao</tabela>
+        </table>
+        <table id="3">
+            <tabelaid>2009</tabelaid>
+            <tabela>tratamentoalarmeoperacao</tabela>
+        </table>
+        <table id="4">
+            <tabelaid>2013</tabelaid>
+            <tabela>veiculos</tabela>
+        </table>
+        <table id="5">
+            <tabelaid>2015</tabelaid>
+            <tabela>tipoalermeoperacao</tabela>
+        </table>
+        <table id="6">
+            <tabelaid>2016</tabelaid>
+            <tabela>linhas_tabelas_originais</tabela>
+        </table>
+        <table id="7">
+            <tabelaid>2018</tabelaid>
+            <tabela>empresas</tabela>
+        </table>
+        <table id="8">
+            <tabelaid>2020</tabelaid>
+            <tabela>motoristas</tabela>
+        </table>
+        <table id="9">
+            <tabelaid>2025</tabelaid>
+            <tabela>operacoes</tabela>
+        </table>
+        <table id="10">
+            <tabelaid>2033</tabelaid>
+            <tabela>VEICULOS</tabela>
+        </table>
+    </tables>
+    <columns>
+        <column id="0">
+            <tipo>1</tipo>
+            <banco>1</banco>
+            <tabela>descricaoalarmesoperacao</tabela>
+            <campo>DESCRICAO</campo>
+            <tipocampo></tipocampo>
+            <nome>Descrição de Alarmes</nome>
+            <funcao></funcao>
+            <operacao></operacao>
+            <ordenar>N</ordenar>
+            <formula></formula>
+            <vermelha></vermelha>
+            <amarela></amarela>
+            <verde></verde>
+        </column>
+        <column id="1">
+            <tipo>1</tipo>
+            <banco>1</banco>
+            <tabela>alarmesoperacao</tabela>
+            <campo>CODIGOTIPOALARME</campo>
+            <tipocampo></tipocampo>
+            <nome>Tipo do Alarme</nome>
+            <funcao></funcao>
+            <operacao></operacao>
+            <ordenar>N</ordenar>
+            <formula></formula>
+            <vermelha></vermelha>
+            <amarela></amarela>
+            <verde></verde>
+        </column>
+        <column id="2">
+            <tipo>1</tipo>
+            <banco>1</banco>
+            <tabela>veiculos</tabela>
+            <campo>IDENTIFICADOR</campo>
+            <tipocampo></tipocampo>
+            <nome>Identificador do Veículo</nome>
+            <funcao></funcao>
+            <operacao></operacao>
+            <ordenar>N</ordenar>
+            <formula></formula>
+            <vermelha></vermelha>
+            <amarela></amarela>
+            <verde></verde>
+        </column>
+        <column id="3">
+            <tipo>1</tipo>
+            <banco>1</banco>
+            <tabela>tipoalermeoperacao</tabela>
+            <campo>DESCRICAO</campo>
+            <tipocampo></tipocampo>
+            <nome>Descrição Tipo Alarme</nome>
+            <funcao></funcao>
+            <operacao></operacao>
+            <ordenar>N</ordenar>
+            <formula></formula>
+            <vermelha></vermelha>
+            <amarela></amarela>
+            <verde></verde>
+        </column>
+        <column id="4">
+            <tipo>1</tipo>
+            <banco>1</banco>
+            <tabela>statusalarmeoperacao</tabela>
+            <campo>DESCRICAO</campo>
+            <tipocampo></tipocampo>
+            <nome>Descrição Status Alarme</nome>
+            <funcao></funcao>
+            <operacao></operacao>
+            <ordenar>N</ordenar>
+            <formula></formula>
+            <vermelha></vermelha>
+            <amarela></amarela>
+            <verde></verde>
+        </column>
+        <column id="5">
+            <tipo>1</tipo>
+            <banco>1</banco>
+            <tabela>alarmesoperacao</tabela>
+            <campo>DATA</campo>
+            <tipocampo></tipocampo>
+            <nome>Data Ocorrência</nome>
+            <funcao></funcao>
+            <operacao></operacao>
+            <ordenar>N</ordenar>
+            <formula></formula>
+            <vermelha></vermelha>
+            <amarela></amarela>
+            <verde></verde>
+        </column>
+    </columns>
+    <calculated/>
+    <groups/>
+    <prefilters>
+        <prefilter id="0">
+            <banco>1</banco>
+            <tabela>alarmesoperacao</tabela>
+            <campo>DATA</campo>
+            <operadores>igual,entre,ontem,semana,mes</operadores>
+        </prefilter>
+        <prefilter id="1">
+            <banco>1</banco>
+            <tabela>alarmesoperacao</tabela>
+            <campo>CODIGOTRATAMENTO</campo>
+            <operadores>selecionar</operadores>
+        </prefilter>
+    </prefilters>
+    <filters>
+        <filter id="0">
+            <banco>1</banco>
+            <tabela>alarmesoperacao</tabela>
+            <campo>DATA</campo>
+            <operador>semana</operador>
+            <valor1></valor1>
+            <valor2></valor2>
+            <bloqueado>0</bloqueado>
+        </filter>
+        <filter id="1">
+            <banco>1</banco>
+            <tabela>alarmesoperacao</tabela>
+            <campo>CODIGOTRATAMENTO</campo>
+            <operador>selecionar</operador>
+            <valor1>1,2,3,4,6</valor1>
+            <valor2></valor2>
+            <bloqueado>0</bloqueado>
+        </filter>
+    </filters>
+    <detail detail="T"/>
+</report>

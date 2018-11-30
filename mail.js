@@ -56,10 +56,21 @@ function EquipStatToHTML(sprintf,stat) {
 
   function AlarmesStatToHTML(sprintf,stat) {
 
+    stat.veiculos.sort(function (a, b) {
+      if (a.total > b.total) {
+        return -1;
+      }
+      if (a.total < b.total) {
+        return 1;
+      }
+      // a must be equal to b
+      return 0;
+    });
+
     var d1 = Date.parse('today');
     var html = '<table border=1><tr><th colspan=2>'+stat.base+ ': ' + stat.alarmes +'</th></tr>';
     if(stat.erro){
-      html += '<tr><td colspan=4>Erro: ' + stat.erro + '</td></tr>';
+      html += '<tr><td colspan=2>Erro: ' + stat.erro + '</td></tr>';
     }else{
       html += '<tr><th>Veículos: '+ stat.alarmes_veiculo + '</th><th>Operacionais: '+ stat.alarmes_operacional + '</th></tr>';
 
@@ -72,14 +83,28 @@ function EquipStatToHTML(sprintf,stat) {
         html += '<b>' + stat.desc_alarmes_operacao[alarmeo].tipo + '</b>: ' + stat.desc_alarmes_operacao[alarmeo].total + '<br>'
       }
       html += '</td></tr>';
+      html += '<tr><td>';
+      html += '<b>Pendentes:</b> ' + stat.veiculo.pendentes + '<br>';
+      html += '<b>Válidos:</b> ' + stat.veiculo.validos + '<br>';
+      html += '<b>Inválidos:</b> ' + stat.veiculo.invalidos + '<br>';
+      html += '</td><td>';
+      html += '<b>Pendentes:</b> ' + stat.operacao.pendentes + '<br>';
+      html += '<b>Válidos:</b> ' + stat.operacao.validos + '<br>';
+      html += '<b>Inválidos:</b> ' + stat.operacao.invalidos + '<br>';
+      html += '</td></tr>';
+      html += '<tr><th colspan=2>Veículos e Alarmes por Veículo</th></tr>';
+      html += '<tr><td colspan=2 align=center>';
+      for(var veic in stat.veiculos){
+        html += '<b>' + stat.veiculos[veic].id + '</b>: ' + stat.veiculos[veic].total + '<br>'
+      }
+      html += '</td></tr>';
       html += '<tr><td colspan=4>Gerado em:' + d1.toString('d/MM/yyyy') + '</td></tr>';
       html += '<tr><td colspan=4>Dados entre:' + stat.min_data + ' e ' + stat.max_data + '</td></tr>';
     }
     html += '</table>';
     return html;
   }
-  
-  
+   
   function EnviaAlarmes(sprintf,statistic) {
     var mailOptions = {
       from: 'ronaldo.sella@gmail.com',

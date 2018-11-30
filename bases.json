@@ -4,21 +4,31 @@
         "chave" : "33ca2194a3e7ef32e281825eef50a513",
         "nome_banco" : "dashboard_inlog"
     },
-    "Sorriso MG" : {
-        "host" : "http://ubertrans.inlog.com.br:8090/dashboard/rest/exportarrelatorio",
-        "chave" : "2036a140756227e58aa3418cc63c9193",
-        "nome_banco" : "dashboard_inlog"
-    },
-        "Marechal" : {
-        "host" : "http://marechal.inlog.com.br:8090/dashboard/rest/exportarrelatorio",
-        "chave" : "8cb43d742abe4e54df4868b47c1585a2",
-        "nome_banco" : "dashboard_inlog"
-    },
-    "Corpus" : {
-        "host" : "http://corpus.inlog.com.br:8090/dashboard/rest/exportarrelatorio",
-        "chave" : "15411a6ea99ef4abc9bb38edd7d0a64c",
-        "nome_banco" : "dashboard_inlog"
-    },
     "Inativas": {
+        "Único" : {
+            "host" : "http://unico.inlog.com.br:8090/dashboard/rest/exportarrelatorio",
+            "chave" : "cd2f443a266c6480b4a02fafadb87782",
+            "nome_banco" : "dashboard_inlog"
+        },
+            "Eucatur" : {
+            "host" : "http://eucatur.inlog.com.br:8090/dashboard/rest/exportarrelatorio",
+            "chave" : "2f16d585a0caa06f0ff367e7e1151060",
+            "nome_banco" : "dashboard_inlog"
+        },
+        "Sorriso MG" : {
+            "host" : "http://ubertrans.inlog.com.br:8090/dashboard/rest/exportarrelatorio",
+            "chave" : "2036a140756227e58aa3418cc63c9193",
+            "nome_banco" : "dashboard_inlog"
+        },
+            "Marechal" : {
+            "host" : "http://marechal.inlog.com.br:8090/dashboard/rest/exportarrelatorio",
+            "chave" : "8cb43d742abe4e54df4868b47c1585a2",
+            "nome_banco" : "dashboard_inlog"
+        },
+            "Corpus" : {
+            "host" : "http://corpus.inlog.com.br:8090/dashboard/rest/exportarrelatorio",
+            "chave" : "15411a6ea99ef4abc9bb38edd7d0a64c",
+            "nome_banco" : "dashboard_inlog"
+        }
     }
 }

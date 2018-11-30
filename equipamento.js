@@ -56,10 +56,10 @@ function Req(request, dbBase, base){
         };
         
         if(error){
-            console.log(this.base + ': ERRO!');
+            //console.log(this.base + ': ERRO!');
             statistic.erro = error.message;
         } else if(body.erro){
-            console.log(this.base + ': ERRO!');
+            //console.log(this.base + ': ERRO!');
             statistic.erro = body.erro;
         }else{
             if(body.Dados){
@@ -123,7 +123,7 @@ function Req(request, dbBase, base){
                 }
             }
         }
-        console.log(this.base + ':' + JSON.stringify(statistic));
+        //console.log(this.base + ':' + JSON.stringify(statistic));
 
         mailfunc.EnviaEquip(sprintf,statistic);
     });
